@@ -12,6 +12,7 @@ import SellCar from "./components/Admin/SellCar";
 import ViewCars from "./components/Admin/ViewCars";
 import SingleCar from "./components/Admin/SingleCar";
 import SingleOne from "./components/SingleOne";
+import Login from "./components/Admin/Login";
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +42,7 @@ function App() {
             <Route path=":id" element={<SingleOne />} />
           </Route>
         </Route>
+        <Route path="login" element={<Login />} />
         <Route path="/admin">
           <Route index element={<Dashboard />} />
           <Route path="add_car" element={<AddCar />} />

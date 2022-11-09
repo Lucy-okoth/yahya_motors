@@ -4,6 +4,7 @@ import CarStructure from '../../CarStructure'
 function ViewCars() {
  
   const [cars ,setCars] = useState([])
+  //to be feteched from the server
   useEffect(() => {
     fetch('http://localhost:3000/cars') 
     .then(data => data.json())

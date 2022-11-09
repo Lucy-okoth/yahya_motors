@@ -3,7 +3,8 @@ import CarStructure from '../CarStructure'
 
 function Bmw() {
   return (
-    <CarStructure name={"this a cool bm"}/
+    <CarStructure name={"this a cool bm"}/>
+  )
 }
 
 export default Bmw

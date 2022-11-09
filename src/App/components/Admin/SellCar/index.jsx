@@ -71,47 +71,47 @@ function SellCar() {
       </form>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none mx-4 ">
+          <div className="justify-center bg  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none mx-4 ">
             <div className="relative sm:w-3/4 mx-auto">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col sm:h-3/4 bg-white outline-none focus:outline-none">
+              <div className="border-0 sm:rounded-lg shadow-lg relative flex flex-col sm:h-3/4 bg-purple-300 w-screen sm:w-full  outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h1 className="text-center">Transaction details</h1>
                 </div>
                 {/*body*/}
                 <div className="relative flex-auto p-3 p-auto m-auto">
                   <p className="text-dark">
-                    Customer Name:{" "}
+                    Customer Name:
                     <span className="text-orange-500 border-2 border-gray-200 rounded-md">
                       {sales.customer_name}
                     </span>
                   </p>
                   <p className="text-dark">
-                    Customer Email:{" "}
+                    Customer Email:
                     <span className="text-orange-500 border-2 border-gray-200 rounded-md">
                       {sales.customer_email}
                     </span>
                   </p>
                   <p className="text-dark">
-                    Car Category:{" "}
+                    Car Category:
                     <span className="text-orange-500 border-2 border-gray-200 rounded-md">
                       {car.category}
                     </span>
                   </p>
                   <p className="text-dark">
-                    car transmission:{" "}
+                    car transmission:
                     <span className="text-orange-500 border-2 border-gray-200 rounded-md">
                       {car.transmission}
                     </span>
                   </p>
                   <p className="text-dark">
-                    Car Model:{" "}
+                    Car Model:
                     <span className="text-orange-500 border-2 border-gray-200 rounded-md">
                       {car.model}
                     </span>
                   </p>
                   <p className="text-dark">
-                    Car Price:{" "}
+                    Car Price:
                     <span className="text-green-500 border-2 p5 border-gray-200 rounded-md">
                       {car.price}
                     </span>

@@ -34,7 +34,7 @@ body:JSON.stringify(updateInfo)
   .then(data => {
     console.log(data)
     setShowModal(false)
-    navigate("/admin/view_car")
+    navigate(`/admin/view_car/${data.id}}`)
   })
 }
 

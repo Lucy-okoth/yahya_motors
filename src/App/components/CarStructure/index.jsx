@@ -5,7 +5,7 @@ function CarStructure({car}) {
   <a key={car.id} href={car.id} className="group">
     <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
       <img
-        src={car.url}
+        src={car.front_url}
         alt={"alternative"}
         className="h-36 w-full object-cover object-center group-hover:opacity-75"
       />

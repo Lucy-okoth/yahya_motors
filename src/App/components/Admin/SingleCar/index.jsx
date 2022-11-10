@@ -117,11 +117,11 @@ function SingleCar() {
 
                   <div className="flex flex-row justify-around pr-1">
                     <label className="text-black pr-1 font-bold">Category:</label>
-                    <input className="text-white border border-gray-200 rounded-md"></input>
+                    <input className="text-black border border-gray-200 rounded-md"></input>
                   </div>
                   <div className="flex flex-row justify-around pr-1">
                     <label className="text-black pr-1 font-bold">Fuel:</label>
-                    <input className="text-white border border-gray-200 rounded-md"></input>
+                    <input className="text-black border border-gray-200 rounded-md"></input>
                   </div>
                   <div className="flex flex-row justify-around pr-1">
                     <label className="text-black pr-1 font-bold">Year:</label>
@@ -135,7 +135,7 @@ function SingleCar() {
                   </div>
                   <div className="flex flex-row justify-around pr-1">
                     <label className="text-black pr-1 font-bold">Seats:</label>
-                    <input className="text-white border border-gray-200 rounded-md"></input>
+                    <input className="text-black border border-gray-200 rounded-md"></input>
                   </div>
                 </div>
                 <div className="flex items-center justify-around p-2 border-t border-solid border-slate-200 rounded-b">

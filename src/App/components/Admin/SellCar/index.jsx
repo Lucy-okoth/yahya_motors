@@ -20,7 +20,6 @@ function SellCar() {
     console.log(sales);
     setShowModal(false);
   }
-
   const car = {
     category: "Subaru",
     model: "impreza",

@@ -1,6 +1,8 @@
 import React from "react";
 
 function SingleOne() {
+
+  
   return (
     <div className="color-red">
       <hr></hr>

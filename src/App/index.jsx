@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes ,N} from "react-router-dom";
 import Cars from "./components/Cars";
 import Home from "./components/Home";
 import Subaru from "./components/Subaru";
@@ -12,8 +12,9 @@ import SellCar from "./components/Admin/SellCar";
 import ViewCars from "./components/Admin/ViewCars";
 import SingleCar from "./components/Admin/SingleCar";
 import SingleOne from "./components/SingleOne";
-import Login from "./components/Admin/Login";
-function App() {
+import Bookings from "../pages/Bookings";
+
+import Settings from "../pages/Settings";
   return (
     <BrowserRouter>
       <Routes>
@@ -55,6 +56,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+
 
 export default App;

@@ -4,21 +4,21 @@ import CarStructure from '../CarStructure'
 
 
 function Bmw() {
- 
 
   const [cars ,setCars] = useState([])
   useEffect(() => {
-    fetch('http://localhost:3000/cars') 
+    fetch('http://localhost:9292/cars') 
     .then(data => data.json())
     .then(data => setCars(data)) 
   }, [])
-  console.log(cars)
+  const bmw = cars.filter((item) => {return item.category ==="bmw"})
+
   return ( 
     <div className="bg-white" >
       <h1 className="text-center text-7xl	font-serif tracking-widest	non-italic	">BMW</h1>
     <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        {cars.map((car) => { 
+        {bmw.map((car) => { 
           return <CarStructure key={car.id} car={car} />
         })}
       </div>

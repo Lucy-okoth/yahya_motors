@@ -79,7 +79,7 @@ function SingleOne() {
           </div>
           <div className="border border-slate-400 justify-between rounded-md">
             <span className="ml-3 mr-3">In Stock:</span>
-            <span>50</span>
+            <span>{carData.quantity}</span>
           </div>
           <Link
             className="block bg-sky-600 p-2 text-center hover:bg-blue-700 w-auto rounded-md shadow-md mt-5"

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function SellCar() {
   const [sales, setSales] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [cars,setCars] = useState([]);
   const [car, setCar] = useState({});
-
+  const [update,setUpdate] = useState(false);
+const navigation = useNavigate()
   function handleChange(e) {
     const value = e.target.value;
     const name = e.target.name;
@@ -24,7 +26,13 @@ function SellCar() {
       body: JSON.stringify(dataToDb),
     })
       .then((res) => res.json())
-      .then((data) => alert("transaction sucessfull ", data))
+      .then((data) => {
+        console.log(data)
+        alert(`${data.name} Thanks for purchasing ${data.model}`)
+      setUpdate(update => !update)
+      setShowModal(false)
+      navigation("/admin/view_car")
+      })
   }
 
   function handleTransaction() {
@@ -33,12 +41,13 @@ function SellCar() {
     console.log(sales);
     console.log(car)
     setShowModal(true);
+    
   }
   useEffect(() => {
     fetch('http://localhost:9292/cars') 
     .then(data => data.json())
     .then(data => setCars(data)) 
-  }, [])
+  }, [update])
   
   // const mercedes = cars.filter((item) => {return item.model ===sales.car_model})
 

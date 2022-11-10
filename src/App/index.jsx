@@ -13,9 +13,11 @@ import ViewCars from "./components/Admin/ViewCars";
 import SingleCar from "./components/Admin/SingleCar";
 import SingleOne from "./components/SingleOne";
 import Login from "./components/Admin/Login";
+import NavBar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
+    <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cars">

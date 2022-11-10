@@ -6,7 +6,7 @@ function SingleCar() {
   const carid = useParams()
   const [showModal, setShowModal] = useState(false);
   const [carData, setCarData] = useState({});
-  const [updateInfo,setUpdateInfo] = useState({})
+  const [updateInfo,setUpdateInfo] = useState({id: carid.id});
 
 useEffect(()=>{
   fetch(`http://localhost:9292/cars/${carid.id}`)
@@ -20,8 +20,6 @@ function handleChange(e) {
   const value = e.target.value
 setUpdateInfo({...updateInfo,[name]: value})
 }
-
-console.log(updateInfo)
 
 function handleUpdate() {
   console.log(updateInfo)
@@ -104,7 +102,7 @@ function handleUpdate() {
           </div>
           <div className="border border-slate-400 m-2 justify-between rounded-md">
             <span className="ml-3 mr-3">Quantity:</span>
-            <span>7</span>
+            <span>{carData.quantity}</span>
           </div>
           <button
             onClick={() => setShowModal(true)}
@@ -123,6 +121,10 @@ function handleUpdate() {
                 </div>
                 {/*body*/}
                 <div className="relative flex-row flex-auto p-5  p-auto m-auto justify-around">
+                <div className="flex flex-row justify-around m-2">
+                    <label className="text-black font-bold pr-1">Id:</label>
+                    <input className="border bg-gray-200 rounded-md" name="price" onChange={(e)=>handleChange(e)} value={carData.id} ></input>
+                  </div>
                   <div className="flex flex-row justify-around m-2">
                     <label className="text-black font-bold pr-1">Price:</label>
                     <input className="border bg-gray-200 rounded-md" name="price" onChange={(e)=>handleChange(e)} ></input>

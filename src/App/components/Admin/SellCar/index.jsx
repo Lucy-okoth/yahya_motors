@@ -1,32 +1,56 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function SellCar() {
   const [sales, setSales] = useState({});
   const [showModal, setShowModal] = useState(false);
-
+  const [cars,setCars] = useState([]);
+  const [car, setCar] = useState({});
+  const [update,setUpdate] = useState(false);
+const navigation = useNavigate()
   function handleChange(e) {
     const value = e.target.value;
     const name = e.target.name;
     setSales({ ...sales, [name]: value });
   }
 
-  function allData() {
-    setShowModal(true);
-    console.log(sales);
+  function handlePost() {
+    console.log(sales)
+    console.log(car)
+    const dataToDb = {buyer_email: sales.buyer_email, buyer_name: sales.buyer_name, category:car.category, price:car.price, model:car.model}
+    fetch("http://localhost:9292/sell_car", {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(dataToDb),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        alert(`${data.name} Thanks for purchasing ${data.model}`)
+      setUpdate(update => !update)
+      setShowModal(false)
+      navigation("/admin/view_car")
+      })
   }
 
   function handleTransaction() {
-    console.log(car);
+    const filtered = cars.find(item => item.model === sales.car_model)
+    setCar(car => filtered)
     console.log(sales);
-    setShowModal(false);
+    console.log(car)
+    setShowModal(true);
+    
   }
-  const car = {
-    category: "Subaru",
-    model: "impreza",
-    price: 1200000,
-    transmission: "manual",
-    fuel: "petrol",
-  };
+
+  useEffect(() => {
+    fetch('http://localhost:9292/cars') 
+    .then(data => data.json())
+    .then(data => setCars(data)) 
+  }, [update])
+  
+  // const mercedes = cars.filter((item) => {return item.model ===sales.car_model})
 
   return (
     <div className="bg-hero w-screeen h-screen">
@@ -38,7 +62,7 @@ function SellCar() {
             onChange={(e) => handleChange(e)}
             className="rounded-md border border-slate-300"
             type="text"
-            name="customer_name"
+            name="buyer_name"
           />
         </div>
         <div className="flex flex-col">
@@ -47,7 +71,7 @@ function SellCar() {
             onChange={(e) => handleChange(e)}
             className="rounded-md border border-slate-300"
             type="text"
-            name="customer_email"
+            name="buyer_email"
           />
         </div>
         <div className="flex flex-col mb-4">
@@ -63,7 +87,7 @@ function SellCar() {
           <button
             className="bg-black text-white active:bg-sky-600 font-bold  text-xs px-3 py-3 rounded-md shadow hover:bg-gray-400 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
-            onClick={allData}>
+            onClick={handleTransaction}>
             Process Transaction
           </button>
         </div>
@@ -84,7 +108,7 @@ function SellCar() {
                     Customer Name:
                     </span>
                     <span className="text-white border-2 border-gray-200 rounded-md">
-                      {sales.customer_name}
+                      {sales.buyer_name}
                     </span>
                   </div>
 
@@ -93,7 +117,7 @@ function SellCar() {
                     Customer Email:
                     </span>
                     <span className="text-white border-2 border-gray-200 rounded-md">
-                    {sales.customer_email}
+                    {sales.buyer_email}
                     </span>
                   </div>
                   <div className="text-white bg-theme flex flex-row justify-around pr-1">
@@ -133,7 +157,7 @@ function SellCar() {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 uppercase text-xs p-1 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={handleTransaction}>
+                    onClick={handlePost}>
                     complete
                   </button>
                 </div>

@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -7,6 +7,7 @@ function SingleCar() {
   const [showModal, setShowModal] = useState(false);
   const [carData, setCarData] = useState({});
   const [updateInfo,setUpdateInfo] = useState({id: carid.id});
+  const navigate =useNavigate()
 
 useEffect(()=>{
   fetch(`http://localhost:9292/cars/${carid.id}`)
@@ -22,8 +23,19 @@ setUpdateInfo({...updateInfo,[name]: value})
 }
 
 function handleUpdate() {
-  console.log(updateInfo)
-  console.log(carData.id)
+  fetch(`http://localhost:9292/update`,{
+method: "PATCH",
+headers: {
+  "content-type": "application/json"
+},
+body:JSON.stringify(updateInfo)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    setShowModal(false)
+    navigate("/admin/view_car")
+  })
 }
 
 
@@ -121,10 +133,7 @@ function handleUpdate() {
                 </div>
                 {/*body*/}
                 <div className="relative flex-row flex-auto p-5  p-auto m-auto justify-around">
-                <div className="flex flex-row justify-around m-2">
-                    <label className="text-black font-bold pr-1">Id:</label>
-                    <input className="border bg-gray-200 rounded-md" name="price" onChange={(e)=>handleChange(e)} value={carData.id} ></input>
-                  </div>
+            
                   <div className="flex flex-row justify-around m-2">
                     <label className="text-black font-bold pr-1">Price:</label>
                     <input className="border bg-gray-200 rounded-md" name="price" onChange={(e)=>handleChange(e)} ></input>

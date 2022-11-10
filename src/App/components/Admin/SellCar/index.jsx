@@ -37,7 +37,7 @@ function SellCar() {
           <label>Buyer Name</label>
           <input
             onChange={(e) => handleChange(e)}
-            className="rounded-md"
+            className="rounded-md border border-slate-300"
             type="text"
             name="customer_name"
           />
@@ -46,7 +46,7 @@ function SellCar() {
           <label>Buyer Email</label>
           <input
             onChange={(e) => handleChange(e)}
-            className="rounded-md"
+            className="rounded-md border border-slate-300"
             type="text"
             name="customer_email"
           />
@@ -55,7 +55,7 @@ function SellCar() {
           <label>car_model</label>
           <input
             onChange={(e) => handleChange(e)}
-            className="rounded-md"
+            className="rounded-md border border-slate-300"
             type="text"
             name="car_model"
           />

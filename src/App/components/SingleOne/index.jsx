@@ -6,19 +6,11 @@ function SingleOne() {
   return (
     <div className="h-screen w-11/12 m-auto p-2">
       <p className="h-6 bg-red-600"></p>
-      <div className="ml-3 h-20 text-white py-2 py-auto">
-        <img
-          tabindex="0"
-          class="h-12"
-          src="https://www.1000islandstoyota.com/uploads/config/1000_islands__non_standard_rgb_nss.png"
-          alt="Toyota"
-        />
-      </div>
       <div className="grid grid-cols-4 gap-2">
         <div className="p-4 col-span-4 sm:col-span-3">2022 Toyota Hundra</div>
         <div className="p-4 sm:col-span-1">Price:$56000</div>
       </div>
-      <div className="w-full h-52 grid grid-cols-3 gap-2">
+      <div className="w-full h-52 grid grid-jnejdcols-3 gap-2">
         <div className="border border-slate-100 col-span-4 sm:col-span-2">
           <Carousel>
             <div>

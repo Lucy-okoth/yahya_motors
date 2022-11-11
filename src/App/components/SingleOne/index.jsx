@@ -31,10 +31,10 @@ function SingleOne() {
         <div className="p-4 col-span-4 sm:col-span-3">{`${carData.year} ${carData.category} ${carData.model}`}</div>
         <div className="p-4 sm:col-span-1">Price:${carData.price}</div>
       </div>
-      <div className="w-full h-52 grid grid-cols-3 gap-2">
+      <div className="w-full h-full grid grid-cols-3 gap-2">
         <div className="border border-slate-100 col-span-4 sm:col-span-2">
           <Carousel>
-            <div>
+            <div >
               <img alt={carData.model} src={carData.front_url} />
             </div>
             <div>

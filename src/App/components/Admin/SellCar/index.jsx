@@ -43,6 +43,7 @@ const navigation = useNavigate()
     setShowModal(true);
     
   }
+
   useEffect(() => {
     fetch('http://localhost:9292/cars') 
     .then(data => data.json())

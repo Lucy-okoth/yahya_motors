@@ -136,25 +136,25 @@ body:JSON.stringify(updateInfo)
             
                   <div className="flex flex-row justify-around m-2">
                     <label className="text-black font-bold pr-1">Price:</label>
-                    <input className="border bg-gray-200 rounded-md" name="price" onChange={(e)=>handleChange(e)} ></input>
+                    <input className="border bg-gray-200 rounded-md" name="price" onChange={(e)=>handleChange(e)} required/>
                   </div>
                   <div className="flex flex-row justify-around pr-1 m-2">
                     <label className="text-black pr-1 font-bold">Fuel:</label>
-                    <input className="text-black border bg-gray-200 rounded-md" name="fuel_type" onChange={(e)=>handleChange(e)}  ></input>
+                    <input className="text-black border bg-gray-200 rounded-md" name="fuel_type" onChange={(e)=>handleChange(e)}  required/>
                   </div>
                   <div className="flex flex-row justify-around pr-1 m-2">
                     <label className="text-black pr-1 font-bold">Year:</label>
 
-                    <input className="text-black border bg-gray-200 rounded-md" name="year" onChange={(e)=>handleChange(e)} ></input>
+                    <input className="text-black border bg-gray-200 rounded-md" name="year" onChange={(e)=>handleChange(e)} required/>
                   </div>
                   <div className=" flex flex-row justify-around pr-1 m-2">
                     <label className="text-black pr-1 font-bold">Model:</label>
 
-                    <input className="text-black border bg-gray-200 rounded-md" name="model" onChange={(e)=>handleChange(e)} ></input>
+                    <input className="text-black border bg-gray-200 rounded-md" name="model" onChange={(e)=>handleChange(e)} required/>
                   </div>
                   <div className="flex flex-row justify-around pr-1">
                     <label className="text-black pr-1 font-bold">Seats:</label>
-                    <input className="text-black border bg-gray-200 rounded-md" name="seats" onChange={(e)=>handleChange(e)} ></input>
+                    <input className="text-black border bg-gray-200 rounded-md" name="seats" onChange={(e)=>handleChange(e)} required/>
                   </div>
                 </div>
                 <div className="flex items-center justify-around p-2 border-t border-solid border-slate-200 rounded-b">

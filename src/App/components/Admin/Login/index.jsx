@@ -22,7 +22,8 @@ e.preventDefault()
 
 const newAdmin = admin.filter(item=> item.username===login.username && item.password===login.password)
 if(newAdmin.length < 1){
-    navigate("/admin")
+    alert("please fill in correct credentials")
+    navigate("/login")
    
 }else {
     navigate("/admin")

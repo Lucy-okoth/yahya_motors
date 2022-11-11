@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes ,} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cars from "./components/Cars";
 import Home from "./components/Home";
 import Subaru from "./components/Subaru";
@@ -6,13 +6,12 @@ import Toyota from "./components/Toyota";
 import Nissan from "./components/Nissan";
 import Mercedes from "./components/Mercedes";
 import Bmw from "./components/Bmw";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Admin/Dashboard";
 import AddCar from "./components/Admin/AddCar";
-import SellCar from "./components/Admin/Dashboard/Sellcar";
+import SellCar from "./components/Admin/SellCar";
 import ViewCars from "./components/Admin/ViewCars";
 import SingleCar from "./components/Admin/SingleCar";
 import SingleOne from "./components/SingleOne";
-
 import Login from "./components/Admin/Login";
 import NavBar from "./components/Navbar";
 function App() {

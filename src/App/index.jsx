@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes ,N} from "react-router-dom";
+import { BrowserRouter, Route, Routes ,} from "react-router-dom";
 import Cars from "./components/Cars";
 import Home from "./components/Home";
 import Subaru from "./components/Subaru";
@@ -6,15 +6,15 @@ import Toyota from "./components/Toyota";
 import Nissan from "./components/Nissan";
 import Mercedes from "./components/Mercedes";
 import Bmw from "./components/Bmw";
-import Dashboard from "./components/Admin/Dashboard";
+import Dashboard from "./components/Dashboard";
 import AddCar from "./components/Admin/AddCar";
-import SellCar from "./components/Admin/SellCar";
+import SellCar from "./components/Admin/Dashboard/Sellcar";
 import ViewCars from "./components/Admin/ViewCars";
 import SingleCar from "./components/Admin/SingleCar";
 import SingleOne from "./components/SingleOne";
-import Bookings from "../pages/Bookings";
 
-import Settings from "../pages/Settings";
+import Login from "./components/Admin/Login";
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -56,6 +56,6 @@ import Settings from "../pages/Settings";
       </Routes>
     </BrowserRouter>
   );
-
+}
 
 export default App;

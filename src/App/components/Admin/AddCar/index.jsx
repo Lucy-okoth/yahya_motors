@@ -1,16 +1,24 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 function AddCar() {
 const [carData,setCarData] = useState({})
   function handleInput(e) {
     const value = e.target.value;
     const name = e.target.name;
     setCarData({ ...carData, [name]: value });
-    console.log(carData);
   }
   function handleNewCar() {
     console.log(carData)
+    fetch("http://localhost:9292/add_car", {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(carData),
+    })
+      .then((res) => res.json())
+      .then((data) => alert("car added sucessfull ", data))
   }
-  const models = "bg-violet-300 rounded-md hover:bg-violet-600 text-red-600";
+  const models ="bg-violet-300 rounded-md hover:bg-violet-600 text-red-600";
   return (
     <div className="h-full bg-gray-400 w-screen">
     <h1 className="text-center p-auto">Add Car</h1>

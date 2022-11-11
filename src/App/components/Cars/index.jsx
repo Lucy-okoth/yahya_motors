@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 function Cars() {
   const div = "cols-span-1 md:cols-span-2 shadow-lg flex flex-col h-auto bg-gradient-to-r from-gray-500 via-slate-200 to-gray-500 items-center bg-gray-300 rounded py-auto"
   return (
-    <div className="grid grid-cols-2 bg-gray-100 gap-4 m-6">
+    <div className="grid grid-cols-2 bg-gray-100 gap-4 m-6 bg-[url('https://images.pexels.com/photos/11194877/pexels-photo-11194877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]">
       <div className={div}>
         <div className=" text-center p-3">Nissan</div>
         <div className="p-3">

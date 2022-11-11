@@ -21,9 +21,9 @@ e.preventDefault()
     .then(data => setAdmin(admin => data))
 
 const newAdmin = admin.filter(item=> item.username===login.username && item.password===login.password)
-if(newAdmin.length <= 0){
-    alert("please fill in correct credentials")
-    navigate("/login")
+if(newAdmin.length < 1){
+    navigate("/admin")
+   
 }else {
     navigate("/admin")
 }

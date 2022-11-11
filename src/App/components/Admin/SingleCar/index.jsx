@@ -6,6 +6,7 @@ function SingleCar() {
   const carid = useParams()
   const [showModal, setShowModal] = useState(false);
   const [carData, setCarData] = useState({});
+  const [update,setUpdate] = useState(false)
   const [updateInfo,setUpdateInfo] = useState({id: carid.id});
   const navigate =useNavigate()
 
@@ -13,7 +14,7 @@ useEffect(()=>{
   fetch(`http://localhost:9292/cars/${carid.id}`)
      .then(response => response.json())
      .then(data => setCarData(carData => data));
-},[])
+},[update])
 
 
 function handleChange(e) {
@@ -34,7 +35,9 @@ body:JSON.stringify(updateInfo)
   .then(data => {
     console.log(data)
     setShowModal(false)
+    setUpdate(update => !update)
     navigate(`/admin/view_car/${data.id}}`)
+   
   })
 }
 

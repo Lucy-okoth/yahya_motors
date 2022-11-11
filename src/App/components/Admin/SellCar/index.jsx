@@ -28,7 +28,7 @@ const navigation = useNavigate()
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
-        alert(`${data.name} Thanks for purchasing ${data.model}`)
+        alert(`${data.name} Thanks for purchasing a car`)
       setUpdate(update => !update)
       setShowModal(false)
       navigation("/admin/view_car")
@@ -36,11 +36,17 @@ const navigation = useNavigate()
   }
 
   function handleTransaction() {
-    const filtered = cars.find(item => item.model === sales.car_model)
-    setCar(car => filtered)
-    console.log(sales);
-    console.log(car)
-    setShowModal(true);
+    if(sales.buyer_name.length < 1 || sales.buyer_email < 1 || car.model < 1){
+      alert("the input fields cannot be empty")
+      setShowModal(false);
+    }else{
+      const filtered = cars.find(item => item.model === sales.car_model)
+      setCar(car => filtered)
+      console.log(sales);
+      console.log(car)
+      setShowModal(true);
+    }
+   
     
   }
 
@@ -53,9 +59,9 @@ const navigation = useNavigate()
   // const mercedes = cars.filter((item) => {return item.model ===sales.car_model})
 
   return (
-    <div className="bg-hero w-screeen h-screen">
+    <div className="bg-hero  w-screeen h-screen">
       <h1 className="text-center p-auto">Sell Car</h1>
-      <form className="p-2 p-auto m-auto grid sm:grid-cols-1 sm:w-2/3 text-black">
+      <form className="p-2 mt-7 p-auto m-auto grid sm:grid-cols-1 sm:w-2/3 text-black">
         <div className="flex flex-col">
           <label>Buyer Name</label>
           <input
@@ -63,7 +69,7 @@ const navigation = useNavigate()
             className="rounded-md border border-slate-300"
             type="text"
             name="buyer_name"
-          />
+          required/>
         </div>
         <div className="flex flex-col">
           <label>Buyer Email</label>
@@ -72,7 +78,7 @@ const navigation = useNavigate()
             className="rounded-md border border-slate-300"
             type="text"
             name="buyer_email"
-          />
+          required/>
         </div>
         <div className="flex flex-col mb-4">
           <label>car_model</label>
@@ -81,7 +87,7 @@ const navigation = useNavigate()
             className="rounded-md border border-slate-300"
             type="text"
             name="car_model"
-          />
+          required/>
         </div>
         <div className="flex flex-col">
           <button

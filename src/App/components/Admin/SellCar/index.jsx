@@ -4,10 +4,10 @@ import { Navigate, useNavigate } from "react-router-dom";
 function SellCar() {
   const [sales, setSales] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const [cars,setCars] = useState([]);
+  const [cars, setCars] = useState([]);
   const [car, setCar] = useState({});
-  const [update,setUpdate] = useState(false);
-const navigation = useNavigate()
+  const [update, setUpdate] = useState(false);
+  const navigation = useNavigate();
   function handleChange(e) {
     const value = e.target.value;
     const name = e.target.name;
@@ -15,9 +15,15 @@ const navigation = useNavigate()
   }
 
   function handlePost() {
-    console.log(sales)
-    console.log(car)
-    const dataToDb = {buyer_email: sales.buyer_email, buyer_name: sales.buyer_name, category:car.category, price:car.price, model:car.model}
+    console.log(sales);
+    console.log(car);
+    const dataToDb = {
+      buyer_email: sales.buyer_email,
+      buyer_name: sales.buyer_name,
+      category: car.category,
+      price: car.price,
+      model: car.model,
+    };
     fetch("http://localhost:9292/sell_car", {
       method: "post",
       headers: {
@@ -27,41 +33,39 @@ const navigation = useNavigate()
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
-        alert(`${data.name} Thanks for purchasing a car`)
-      setUpdate(update => !update)
-      setShowModal(false)
-      navigation("/admin/view_car")
-      })
+        console.log(data);
+        alert(`${data.name} Thanks for purchasing a car`);
+        setUpdate((update) => !update);
+        setShowModal(false);
+        navigation("/admin/view_car");
+      });
   }
 
   function handleTransaction() {
-    if(sales.buyer_name.length < 1 || sales.buyer_email < 1 || car.model < 1){
-      alert("the input fields cannot be empty")
+    if (sales.buyer_name.length < 1 || sales.buyer_email < 1 || car.model < 1) {
+      alert("the input fields cannot be empty");
       setShowModal(false);
-    }else{
-      const filtered = cars.find(item => item.model === sales.car_model)
-      setCar(car => filtered)
+    } else {
+      const filtered = cars.find((item) => item.model === sales.car_model);
+      setCar((car) => filtered);
       console.log(sales);
-      console.log(car)
+      console.log(car);
       setShowModal(true);
     }
-   
-    
   }
 
   useEffect(() => {
-    fetch('http://localhost:9292/cars') 
-    .then(data => data.json())
-    .then(data => setCars(data)) 
-  }, [update])
-  
+    fetch("http://localhost:9292/cars")
+      .then((data) => data.json())
+      .then((data) => setCars(data));
+  }, [update]);
+
   // const mercedes = cars.filter((item) => {return item.model ===sales.car_model})
 
   return (
-    <div className="bg-hero  w-screeen h-screen">
-      <h1 className="text-center p-auto">Sell Car</h1>
-      <form className="p-2 mt-7 p-auto m-auto grid sm:grid-cols-1 sm:w-2/3 text-black">
+    <div className="bg-hero mt-8 h-screen">
+      <form className="p-2 mt-16 p-auto m-auto grid sm:grid-cols-1 sm:w-2/3 text-black">
+        <h1 className="text-center text-4xl">Sell Car</h1>
         <div className="flex flex-col">
           <label>Buyer Name</label>
           <input
@@ -69,7 +73,8 @@ const navigation = useNavigate()
             className="rounded-md border border-slate-300"
             type="text"
             name="buyer_name"
-          required/>
+            required
+          />
         </div>
         <div className="flex flex-col">
           <label>Buyer Email</label>
@@ -78,7 +83,8 @@ const navigation = useNavigate()
             className="rounded-md border border-slate-300"
             type="text"
             name="buyer_email"
-          required/>
+            required
+          />
         </div>
         <div className="flex flex-col mb-4">
           <label>car_model</label>
@@ -87,7 +93,8 @@ const navigation = useNavigate()
             className="rounded-md border border-slate-300"
             type="text"
             name="car_model"
-          required/>
+            required
+          />
         </div>
         <div className="flex flex-col">
           <button
@@ -98,6 +105,82 @@ const navigation = useNavigate()
           </button>
         </div>
       </form>
+      <div className="sm:w-2/3 flex sm:flex-row row-wrap m-auto mb-3 p-uto">
+        <input
+          className="rounded-md border border-slate-300"
+          type="text"
+          name="car_model"
+          required
+        />
+        <button className="ml-3 p-1 hover:bg-sky-600 flex flex-row border rounded-md">
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 text-gray-500 dark:text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+         <span>Search</span>
+        </button>
+      </div>
+      <div className="sm:w-2/3 w-full p-2 p-auto m-auto border">
+        <table className="w-full">
+          <thead className="justify-around flex flex-row m-auto">
+            <tr>Category</tr>
+            <tr>Model</tr>
+            <tr>Fuel</tr>
+            <tr>Transmission</tr>
+            <tr>year</tr>
+            <tr>price</tr>
+            <tr>select</tr>
+          </thead>
+          <tbody>
+            <hr></hr>
+            <hr></hr>
+            <tr className="justify-around flex flex-row m-auto">
+              <td>subaru</td>
+              <td>impreza</td>
+              <td>petrol</td>
+              <td>transmission</td>
+              <td>year</td>
+              <td>price</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+            </tr>
+            <hr></hr>
+            <tr className="justify-around flex flex-row m-auto">
+              <td>subaru</td>
+              <td>impreza</td>
+              <td>petrol</td>
+              <td>transmission</td>
+              <td>year</td>
+              <td>price</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+            </tr>
+            <hr></hr>
+            <tr className="justify-around flex flex-row m-auto">
+              <td>subaru</td>
+              <td>impreza</td>
+              <td>petrol</td>
+              <td>transmission</td>
+              <td>year</td>
+              <td>price</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       {showModal ? (
         <>
           <div className="justify-center  bg-theme items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none mx-4 ">
@@ -110,26 +193,20 @@ const navigation = useNavigate()
                 {/*body*/}
                 <div className="relative flex-row flex-auto p-3  p-auto m-auto">
                   <div className="text-white bg-theme flex flex-row justify-around">
-                    <span className="text-white">
-                    Customer Name:
-                    </span>
+                    <span className="text-white">Customer Name:</span>
                     <span className="text-white border-2 border-gray-200 rounded-md">
                       {sales.buyer_name}
                     </span>
                   </div>
 
                   <div className="text-white bg-theme flex flex-row justify-around pr-1">
-                    <span className="text-white pr-1">
-                    Customer Email:
-                    </span>
+                    <span className="text-white pr-1">Customer Email:</span>
                     <span className="text-white border-2 border-gray-200 rounded-md">
-                    {sales.buyer_email}
+                      {sales.buyer_email}
                     </span>
                   </div>
                   <div className="text-white bg-theme flex flex-row justify-around pr-1">
-                    <span className="text-white pr-1">
-                    Car Category:
-                    </span>
+                    <span className="text-white pr-1">Car Category:</span>
                     <span className="text-white border-2 border-gray-200 rounded-md">
                       {car.category}
                     </span>

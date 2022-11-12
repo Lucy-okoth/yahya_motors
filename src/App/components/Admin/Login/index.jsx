@@ -50,7 +50,7 @@ if(newAdmin.length < 1){
                <div className='text-gray-400'>
                  
                </div>
-               <button onClick={(e)=>handleLogin(e)} className='p-3 rounded-md text-gray-400 bg-blue-600'>LOG IN</button>
+               <button onClick={(e)=>handleLogin(e)} className='p-3 rounded-md text-white bg-blue-600'>LOG IN</button>
            </form>
        </div>
     </div>

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 function Home() {
   return (
-    <div className="h-screen sm:grid-cols-2 flex flex-col justify-center bg-[url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2021/overview/2021-nissan-gtr-supercar.jpg')]">
+    <div className="h-screen sm:grid-cols-2 flex flex-col justify-center bg-[url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2021/overview/2021-nissan-gtr-supercar.jpg')] bg-no-repeat bg-cover bg-center bg-fixed">
       <div className="cols-span-2 p-11 p-auto">
       <div className='mb-6'>
         <h1 className='sm:pl-4 text-2xl font-bold text-white'>

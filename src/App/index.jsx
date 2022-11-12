@@ -18,6 +18,7 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/> 
+   
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cars">

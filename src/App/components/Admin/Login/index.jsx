@@ -21,9 +21,10 @@ e.preventDefault()
     .then(data => setAdmin(admin => data))
 
 const newAdmin = admin.filter(item=> item.username===login.username && item.password===login.password)
-if(newAdmin.length <= 0){
+if(newAdmin.length < 1){
     alert("please fill in correct credentials")
     navigate("/login")
+   
 }else {
     navigate("/admin")
 }
@@ -49,7 +50,7 @@ if(newAdmin.length <= 0){
                <div className='text-gray-400'>
                  
                </div>
-               <button onClick={(e)=>handleLogin(e)} className='p-3 rounded-md text-gray-400 bg-blue-600'>LOG IN</button>
+               <button onClick={(e)=>handleLogin(e)} className='p-3 rounded-md text-white bg-blue-600'>LOG IN</button>
            </form>
        </div>
     </div>

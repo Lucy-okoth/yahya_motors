@@ -1,17 +1,21 @@
-import React from "react";
-import Sidebar from "./SideBar";
+import React from 'react'
+import Sidebar from './SideBar'
+import { Outlet } from 'react-router-dom';
+
 
 function Dashboard() {
   return (
-    <div className="grid mt-16 sm:grid-cols-2 h-screen w-screen">
+    <div className="flex flex-row mt-16  h-screen w-screen">
       <Sidebar />
-      <div className="sm:cols-span-1 shadow-lg grid p-5 grid-cols-2 gap-3 h-screen bg-black rounded-md">
+      {/* <Outlet /> */}
+      <div className="w-full shadow-lg  p-5  gap-3 h-screen  rounded-md">
+        {/* <div className="h-36 rounded-lg bg-purple-100"></div>
         <div className="h-36 rounded-lg bg-purple-100"></div>
         <div className="h-36 rounded-lg bg-purple-100"></div>
         <div className="h-36 rounded-lg bg-purple-100"></div>
         <div className="h-36 rounded-lg bg-purple-100"></div>
-        <div className="h-36 rounded-lg bg-purple-100"></div>
-        <div className="h-36 rounded-lg bg-purple-100"></div>
+        <div className="h-36 rounded-lg bg-purple-100"></div> */}
+        <Outlet />
       </div>
     </div>
   );

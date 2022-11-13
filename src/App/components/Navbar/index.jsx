@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function NavBar (){
   return (
-    <div className='w-screen h-[60px] bg-black fixed top-0 left-0 right-0 mb-2'>
+    <div className='w-screen h-[60px] bg-black mb-2'>
         <div className=' max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full'>
         <div>
             <h1 className='text-[#fff]'>YAHYA MOTORS</h1>

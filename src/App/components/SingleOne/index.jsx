@@ -12,6 +12,11 @@ function SingleOne() {
       .then((response) => response.json())
       .then((data) => setCarData((carData) => data));
   }, []);
+
+
+ console.log(carData)
+const reviews = carData;
+console.log(reviews)
   return (
     <div className="h-screen w-11/12 m-auto p-2">
         <p className="h-6 bg-red-600">
@@ -86,6 +91,10 @@ function SingleOne() {
             to={`/cars/${carData.category}`}>
             Back
           </Link>
+          <div className="h-64 w-44 float-right-bottom bg-red-500 pt-6">
+            <h1>comment section</h1>
+            <div className="flex flex-col"><span>comment:</span><span>rating:</span></div>
+          </div>
         </div>
       </div>
     </div>

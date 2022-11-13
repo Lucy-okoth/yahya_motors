@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function Cars() {
   return (
-    <div className="h-screen bg-left w-full bg-[url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2021/overview/2021-nissan-gtr-supercar.jpg')] bg:fixed bg-left bg-no-repeat bg-cover">
+    <div className=" bg-left  w-full  bg-[url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2021/overview/2021-nissan-gtr-supercar.jpg')] bg-fixed bg-left bg-no-repeat bg-cover">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 my-40 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
             <Link  to="nissan" className="group">

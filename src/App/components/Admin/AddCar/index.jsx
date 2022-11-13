@@ -20,61 +20,61 @@ const [carData,setCarData] = useState({})
   }
   const models ="bg-violet-300 rounded-md hover:bg-violet-600 text-red-600";
   return (
-    <div className="h-full bg-gray-400 w-screen">
-    <h1 className="text-center p-auto">Add Car</h1>
-    <form className="p-2 p-auto m-auto grid sm:grid-cols-1 w-2/3">
+    <div className="h-full bg-indigo-200 ">
+    <h1 className="text-center p-auto text-4xl">Add Car</h1>
+    <form className="p-2 p-auto m-auto grid sm:grid-cols-2 gap-4  w-full items-center">
       <div className="flex flex-col">
-        <label>Category</label>
-        <input  onChange={(e) => handleInput(e)} className="rounded-md" type="text" name="category" />
+        <label className='text-4xl'>Category</label>
+        <input  onChange={(e) => handleInput(e)} className="rounded-md p-3" type="text" name="category" />
       </div>
       <div className="flex flex-col">
-        <label>Model</label>
-        <input onChange={(e) => handleInput(e)}  className="rounded-md" type="text" name="model" />
+        <label className='text-4xl'>Model</label>
+        <input onChange={(e) => handleInput(e)}  className="rounded-md p-3" type="text" name="model" />
       </div>
       <div className="flex flex-col">
-        <label>seats</label>
-        <input onChange={(e) => handleInput(e)}  className="rounded-md" type="text" name="seats" />
+        <label className='text-4xl'>seats</label>
+        <input onChange={(e) => handleInput(e)}  className="rounded-md p-3" type="text" name="seats" />
       </div>
       <div className="flex flex-col">
-        <label>Price</label>
-        <input onChange={(e) => handleInput(e)}  className="rounded-md" type="text" name="price"/>
+        <label className='text-4xl'>Price</label>
+        <input onChange={(e) => handleInput(e)}  className="rounded-md p-3" type="text" name="price"/>
       </div>
       <div className="flex flex-col">
-        <label>Quantity</label>
-        <input onChange={(e) => handleInput(e)}  className="rounded-md" type="text" name="quantity"/>
+        <label className='text-4xl'>Quantity</label>
+        <input onChange={(e) => handleInput(e)}  className="rounded-md p-3" type="text" name="quantity"/>
       </div>
       <div className="flex flex-col">
-        <label>Fuel type</label>
-        <input onChange={(e) => handleInput(e)}  className="rounded-md" type="text" name="fuel_type"/>
+        <label className='text-4xl'>Fuel type</label>
+        <input onChange={(e) => handleInput(e)}  className="rounded-md p-3" type="text" name="fuel_type"/>
       </div>
       <div className="flex flex-col">
-        <label>Year</label>
-        <input onChange={(e) => handleInput(e)}  className="rounded-md" type="text" name="year"/>
+        <label className='text-4xl'>Year</label>
+        <input onChange={(e) => handleInput(e)}  className="rounded-md p-3" type="text" name="year"/>
       </div>
       <div className="flex flex-col mb-4">
-        <label>Transmission</label>
-        <input onChange={(e) => handleInput(e)}  className='rounded -md' name="transmission"/>
+        <label className='text-4xl'>Transmission</label>
+        <input onChange={(e) => handleInput(e)}  className='rounded -md p-3' name="transmission"/>
       </div>
       <div className="flex flex-col mb-4">
-        <label>Front url</label>
-        <input onChange={(e) => handleInput(e)}  className='rounded -md' name="front_url"/>
+        <label className='text-4xl'>Front url</label>
+        <input onChange={(e) => handleInput(e)}  className='rounded -md p-3' name="front_url"/>
       </div>
       <div className="flex flex-col mb-4">
-        <label>Back url</label>
-        <input onChange={(e) => handleInput(e)}  className='rounded -md' name="back_url"/>
+        <label className='text-4xl'>Back url</label>
+        <input onChange={(e) => handleInput(e)}  className='rounded -md p-3' name="back_url"/>
       </div>
       <div className="flex flex-col mb-4">
-        <label>Side url</label>
-        <input onChange={(e) => handleInput(e)}  className='rounded -md' name="side_url"/>
+        <label className='text-4xl'>Side url</label>
+        <input onChange={(e) => handleInput(e)}  className='rounded -md p-3' name="side_url"/>
       </div>
       <div className="flex flex-col mb-4">
-        <label>Inside url</label>
-        <input onChange={(e) => handleInput(e)}  className='rounded -md' name="inside_url"/>
+        <label className='text-4xl'>Inside url</label>
+        <input onChange={(e) => handleInput(e)}  className='rounded -md p-3' name="inside_url"/>
       </div>
       <div className="flex flex-col">
         <button
         onClick={handleNewCar}
-         className="bg-gray-700 hover:bg-gray-800 w-36 text-white rounded-md"
+         className="bg-gray-700 hover:bg-gray-800 w-36 text-white rounded-md p-3"
           type="button"
           data-modal-toggle="popup-modal">
           Add Car

@@ -1,55 +1,65 @@
-import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+
+
 function Cars() {
-  const div = "cols-span-1 md:cols-span-2 shadow-lg flex flex-col h-auto bg-gradient-to-r from-gray-500 via-slate-200 to-gray-500 items-center bg-gray-300 rounded py-auto"
   return (
-    <div className="grid grid-cols-2 bg-gray-100 gap-4 m-6 bg-[url('https://images.pexels.com/photos/11194877/pexels-photo-11194877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]">
-      <div className={div}>
-        <div className=" text-center p-3">Nissan</div>
-        <div className="p-3">
-        <img className="h-14 justify-center"src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/700px-Nissan_logo.png?20200715092107" alt="logo"/>
-        </div>
-        <div className="p-3">
-        <Link to="/cars/nissan" className= "bg-blue-500 rounded-sm text-white">Explore</Link>
-        </div>
-      </div>
-      <div className={div}>
-        <div className=" text-center p-3">BMW</div>
-        <div className="p-3">
-        <img className="h-14 justify-center"src="https://cdn.pixabay.com/photo/2016/08/15/18/18/bmw-1596080_960_720.png" alt="logo"/>
-        </div>
-        <div className="p-3">
-        <Link to="/cars/bmw" className= "bg-blue-500 rounded-sm text-white">Explore</Link>
-        </div>
-        </div>
-      <div className={div}>
-        <div className=" text-center p-3">Mercedes</div>
-        <div className="p-3">
-        <img className="h-14 justify-center"src="https://i.pinimg.com/originals/86/0d/26/860d2666caf66420dffeeb98a1662f74.jpg" alt="logo"/>
-        </div>
-        <div className="p-3">
-        <Link to="/cars/mercedes" className= "bg-blue-500 rounded-sm text-white">Explore</Link>
-        </div>
-      </div>
-      <div className={div}>
-        <div className=" text-center p-3">Subaru</div>
-        <div className="p-3">
-        <img className="h-14 justify-center"src="https://mcdn.wallpapersafari.com/medium/52/35/J4q0hX.jpg" alt="logo"/>
-        </div>
-        <div className="p-3">
-        <Link to="/cars/subaru" className= "bg-blue-500 rounded-sm text-white">Explore</Link>
-        </div>
-      </div>
-      <div className={div}>
-        <div className=" text-center p-3">Toyota</div>
-        <div className="p-3">
-        <img className="h-14 justify-center"src="https://m.media-amazon.com/images/I/41eeJcMzpxL._SY300_SX300_QL70_FMwebp_.jpg" alt="logo"/>
-        </div>
-        <div className="p-3">
-        <Link to="/cars/toyota" className= "bg-blue-500 rounded-sm text-white">Explore</Link>
+    <div className="h-screen bg-left w-full bg-[url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/gtr/2021/overview/2021-nissan-gtr-supercar.jpg')] bg:fixed bg-left bg-no-repeat bg-cover">
+      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="grid grid-cols-1 my-40 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
+            <Link  to="nissan" className="group">
+              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/700px-Nissan_logo.png?20200715092107"
+                  alt={"alternative"}
+                  className="h-48 w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h2 className="text-center text-white my-8">NISSAN</h2>
+              </Link>
+              <Link  to="bmw" className="group">
+              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-36">
+                <img
+                  src="https://seeklogo.com/images/B/bmw-logo-248C3D90E6-seeklogo.com.png"
+                  alt={"alternative"}
+                  className="h-48 w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h2 className="text-center text-white my-8">BMW</h2>
+              </Link>
+              <Link  to="mercedes" className="group">
+              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/800px-Mercedes-Logo.svg.png"
+                  alt={"alternative"}
+                  className="h-48 w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h2 className="text-center text-white my-8">MERCEDES</h2>
+              </Link>
+              <Link  to="subaru" className="group">
+              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNoo81hzEQotF32YEBlg7hSZ8icGQAufACdBDlO_0k3LLxIMm_5X87fkwkglm3Z7sY734&usqp=CAU"
+                  alt={"alternative"}
+                  className="h-48 w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h2 className="text-center text-white my-8">SUBARU</h2>
+              </Link> 
+               <Link  to="toyota" className="group opacity-100">
+                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT47c9aB_MFf5YE3oPjhpep8tiFnt5rYLeJnC1PEzt1&s"
+                    alt={"alternative"}
+                    className="h-48 w-full object-cover object-center group-hover:opacity-75"
+                />
+                </div>
+                <h2 className="text-center text-white my-8">TOYOTA</h2>
+              </Link>
         </div>
       </div>
     </div>
   )
 }
-export default Cars;
+
+export default Cars

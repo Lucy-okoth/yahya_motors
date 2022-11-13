@@ -20,8 +20,6 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/> 
-
-    {/* <SideNav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cars">

@@ -21,9 +21,10 @@ e.preventDefault()
     .then(data => setAdmin(admin => data))
 
 const newAdmin = admin.filter(item=> item.username===login.username && item.password===login.password)
-if(newAdmin.length <= 0){
+if(newAdmin.length < 1){
     alert("please fill in correct credentials")
     navigate("/login")
+   
 }else {
     navigate("/admin")
 }
@@ -34,7 +35,6 @@ if(newAdmin.length <= 0){
        <div className='hidden sm:block'>
         <img className='w-full h-full object-cover' src="https://images.pexels.com/photos/11194877/pexels-photo-11194877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
        </div>
-
        <div className='bg-gray-700 flex flex-col justify-center'>
            <form autoComplete="off" className='max-w-[400px] w-full mx-auto bg-gray-900 p-8 px-8 rounded-lg' >
                <h2 className='text-4xl text-gray-400 font-bold text-center'>LOG IN</h2>
@@ -49,7 +49,7 @@ if(newAdmin.length <= 0){
                <div className='text-gray-400'>
                  
                </div>
-               <button onClick={(e)=>handleLogin(e)} className='p-3 rounded-md text-gray-400 bg-blue-600'>LOG IN</button>
+               <button onClick={(e)=>handleLogin(e)} className='p-3 rounded-md text-white bg-blue-600'>LOG IN</button>
            </form>
        </div>
     </div>

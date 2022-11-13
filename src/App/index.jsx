@@ -15,6 +15,7 @@ import SingleOne from "./components/SingleOne";
 import Login from "./components/Admin/Login";
 import NavBar from "./components/Navbar";
 import AdminProfile from "./components/AdminProfile";
+
 // import SideNav from "./components/Admin/Dashboard/SideNav";
 function App() {
   return (
@@ -46,12 +47,12 @@ function App() {
             <Route path=":id" element={<SingleOne />} />
           </Route>
         </Route>
-        {/* <Route path="login" element={<Login />} /> */}
-        <Route path="/admin">
+        <Route path="login" element={<Login />} />
+        <Route path="/admin" element={<Dashboard />}>
 
-          <Route index element={<Dashboard />} />
-          <Route path="admin_profile" element={<AdminProfile />} />
-          <Route path="login" element={<Login />} />
+          {/* <Route index element={<Dashboard />} /> */}
+          <Route path="/admin/admin_profile" element={<AdminProfile />} />
+          {/* <Route path="login" element={<Login />} /> */}
           <Route path="add_car" element={<AddCar />} />
           <Route path="sell_car" element={<SellCar />} />
           <Route path="view_car">

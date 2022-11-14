@@ -14,7 +14,8 @@ import SingleCar from "./components/Admin/SingleCar";
 import SingleOne from "./components/SingleOne";
 import Login from "./components/Admin/Login";
 import NavBar from "./components/Navbar";
-import AdminProfile from "./components/AdminProfile";
+import AdminProfile from "./components/Admin/AdminProfile";
+import Welcome from "./components/Admin/Dashboard/Welcome";
 
 // import SideNav from "./components/Admin/Dashboard/SideNav";
 function App() {
@@ -49,7 +50,7 @@ function App() {
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="/admin" element={<Dashboard />}>
-
+<Route path="" element={<Welcome/>}/>
           {/* <Route index element={<Dashboard />} /> */}
           <Route path="/admin/admin_profile" element={<AdminProfile />} />
           {/* <Route path="login" element={<Login />} /> */}

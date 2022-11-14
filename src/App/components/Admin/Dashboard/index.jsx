@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 function Dashboard() {
   return (
-    <div className="flex flex-row mt-16  h-screen w-screen">
+    <div className="flex flex-row h-screen w-screen">
       <Sidebar />
       {/* <Outlet /> */}
       <div className="w-full shadow-lg  p-5  gap-3 h-screen  rounded-md">

@@ -6,7 +6,7 @@ YAHYA MOTORS FRONT-END
 
 
     ## DESCRIPTION
-The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functinality that have been achieved using filter method in react,selct the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
+The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functionality that have been achieved using filter method in react,select the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
 The second part of the app is the admin section where the admin logs in to his/her account and is redirected to the dashboard  where he/she can get acess to all that is taking place in the website. Below is attached short video of how the dasboard functions.
 
 ## AUTHORS
@@ -54,7 +54,7 @@ clone : git@github.com:Lucy-okoth/yahya_motors.git
 
 Problem Statement
 
-    .The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functinality that have been achieved using filter method in react,selct the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
+    .The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functionality that have been achieved using filter method in react,select the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
     The second part of the app is the admin section where the admin logs in to his/her account and is redirected to the dashboard  where he/she can get acess to all that is taking place in the website. Below is attached short video of how the dasboard functions.
 
 

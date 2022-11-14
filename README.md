@@ -1,9 +1,24 @@
-##YAHYA MOTORS
+##YAHYA MOTORS FRONT-END
 
-    .website is an interactive,easy to use website 
+
+    ##INTRODUCTION
+
+    .The website is a front-end interactive,easy to use application
+
+
+    ## DESCRIPTION
 
 The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functinality that have been achieved using filter method in react,selct the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
 The second part of the app is the admin section where the admin logs in to his/her account and is redirected to the dashboard  where he/she can get acess to all that is taking place in the website. Below is attached short video of how the dasboard functions.
+
+## AUTHORS
+
+This project was contributed by : 
+1. <a href=https://github.com/nicco99> Nicholas Njeru </a>
+2. <a href=https://github.com/Lucy-okoth>Lucy Okoth</a>
+3. <a href=https://github.com/esipil> Timothy Lenku/a>
+4. <a href=https://github.com/Jidraf>Jidraph Ng'ang'a</a>
+5. <a href=https://github.com/muthwi1234>Peter Kilungya</a>
 
 
 Here is a sample sccreensot ofz the app.
@@ -17,8 +32,9 @@ Home page
 
 
 
-Repository Github : https://github.com/Lucy-okoth/yahya_motors
+Repository Front-End Github : https://github.com/Lucy-okoth/yahya_motors
 
+Repository Back-End Github :https://github.com/Lucy-okoth/yahya_motors_backend
 
 
 clone : git@github.com:Lucy-okoth/yahya_motors.git
@@ -26,7 +42,6 @@ clone : git@github.com:Lucy-okoth/yahya_motors.git
 
 ##Table of Contents
 
-    .Group members
 
     .Problem Statement
 
@@ -59,8 +74,14 @@ We have ensured proper use of CRUD operations where a customer can be able to vi
     RUBY + SINATRA -Used to develope back-end configurations and send http request.
     SQLITE - Used to ensure  active models are all set up to query data from the database.
 
-
     
+.Screen Shots
+
+   ![Screenshot from 2022-11-14 11-38-22](https://user-images.githubusercontent.com/108528356/201613800-83647e20-8770-4bbc-a63f-3d6762358860.png)
+![Screenshot from 2022-11-14 11-38-06](https://user-images.githubusercontent.com/108528356/201613833-59a4ad59-004d-4ef8-9f2c-2a91dd46038d.png)
+
+
+
 
 .Requirements
 
@@ -79,12 +100,5 @@ We have ensured proper use of CRUD operations where a customer can be able to vi
 
     MIT License
 
-    Copyright (c) 2022 Yahya-Motors project contributors
-            . All rights reserved.
-                    Lucy OKoth
-                    Nicholas Njeru
-                    Jidraph Kimachia
-                    Timothy Lenku
-                    Peter Kilungya
-
+    Copyright (c) 2022 Yahya-Motors project 
  -->

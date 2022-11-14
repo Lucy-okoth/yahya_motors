@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+##YAHYA MOTORS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    .website is an interactive,easy to use website 
 
-## Available Scripts
+The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functinality that have been achieved using filter method in react,selct the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
+The second part of the app is the admin section where the admin logs in to his/her account and is redirected to the dashboard  where he/she can get acess to all that is taking place in the website. Below is attached short video of how the dasboard functions.
 
-In the project directory, you can run:
 
-### `npm start`
+Here is a sample sccreensot ofz the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Screencast from 14-11-2022  9:16:27 WD.webm](https://user-images.githubusercontent.com/108528356/201588994-d594eeab-a769-480a-b104-6002d7acbb3d.webm)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Home page
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Screencast from 14-11-2022  9:21:23 WD.webm](https://user-images.githubusercontent.com/108528356/201589642-1792ed72-d08d-443a-a2c6-4b8cfc40bc61.webm)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Repository Github : https://github.com/Lucy-okoth/yahya_motors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+clone : git@github.com:Lucy-okoth/yahya_motors.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##Table of Contents
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    .Group members
 
-## Learn More
+    .Problem Statement
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    .Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    .Technologies Used
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    .Video Demo
 
-### Analyzing the Bundle Size
+    .Problems Encountered
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Problem Statement
 
-### Making a Progressive Web App
+    .The app main functionality is to enable users to navigate to the app with ease,login to the app before viewing cars, select the type of car they need a functinality that have been achieved using filter method in react,selct the car they need by being able to view the car parts(back,side,front and inside car). On satisfaction, the buyer can go back view another car.
+    The second part of the app is the admin section where the admin logs in to his/her account and is redirected to the dashboard  where he/she can get acess to all that is taking place in the website. Below is attached short video of how the dasboard functions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+    .Setup/Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+.To use this app click  on home page, in the home page you'll get to see the shop now button which will redirect the customer to the cars page. In the car page, you'll be able to see all the cars availabe and by clicking on a specific car model eg Nissan, you will be redirected to the Nissan car page with all Nissan cars available. You can then select the type of Nissa you want a property thjat has been accomplished by filter method in react.
+By clicking on the specific car model, you'll be able to update the car model details i.e(name, model,price,seats,transmission etc)
+After this you will be redirected to the admin page where the admin enters their user name and password to login. THis will redirect you to the dashboard which has or grants access to all the pages/components in the app itself.
 
-### Deployment
+We have ensured proper use of CRUD operations where a customer can be able to view cars available, the admin can update the cars available and sell Cars.The admin can finally update the cars available after selling the car.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+.Technologies Used
+    Tailwind CSS- For designing front-end and esuring the app is responsive.
+    React JS- Uses for developing the front-end
+    RUBY + SINATRA -Used to develope back-end configurations and send http request.
+    SQLITE - Used to ensure  active models are all set up to query data from the database.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
+
+.Requirements
+
+    You need a phone,Ipad or laptop with stable internet 
+    Connection to run the app.
+    npm start to start the front end the in the back-end code run bundle exec rake server to connect your back-end to front end.
+
+.Cloning
+
+    Clone the site and run it on your machine using the command below on your terminal and then run it
+    git@github.com:Lucy-okoth/yahya_motors.git
+
+
+
+    Licence Information
+
+    MIT License
+
+    Copyright (c) 2022 Yahya-Motors project contributors
+            . All rights reserved.
+                    Lucy OKoth
+                    Nicholas Njeru
+                    Jidraph Kimachia
+                    Timothy Lenku
+                    Peter Kilungya
+
+ -->
